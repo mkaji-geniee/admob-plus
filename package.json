@@ -11,7 +11,9 @@
     "test-android:example": "cd examples/basic && run-s link-plugin && cordova build android",
     "test-ios": "run-s test-ios:*",
     "test-ios:testbed": "cordova-testbed --platform ios --plugin packages/cordova --build-only",
-    "test-ios:example": "cd examples/basic && run-s link-plugin && cordova build ios"
+    "test-ios:example": "cd examples/basic && run-s link-plugin && cordova build ios",
+    "monaca:preview": "npm run dev",
+    "dev": "browser-sync start -s www/ --watch --port 8080 --ui-port 8081"
   },
   "devDependencies": {
     "@commitlint/cli": "^8.3.5",
@@ -21,7 +23,8 @@
     "@frat/link-dir": "^2.3.0",
     "@types/jest": "^25.1.2",
     "@types/yargs": "^15.0.3",
-    "cordova": "9.0.1-nightly.2019.11.10.44afc892",
+    "browser-sync": "^2.24.5",
+    "cordova": "^9.0.0",
     "cordova-testbed": "^0.8.0",
     "eslint": "^6.8.0",
     "eslint-config-concise": "^0.37.1",
@@ -114,5 +117,22 @@
       "packages/*",
       "website"
     ]
+  },
+  "cordova": {
+    "plugins": {
+      "cordova-custom-config": {},
+      "cordova-admob-plus": {
+        "APP_ID_ANDROID": "ca-app-pub-3940256099942544~3347511713",
+        "APP_ID_IOS": "ca-app-pub-3940256099942544~1458002511"
+      },
+      "cordova-plugin-androidx": {},
+      "cordova-plugin-androidx-adapter": {}
+    }
+  },
+  "dependencies": {
+    "cordova-admob-plus": "^0.36.0",
+    "cordova-custom-config": "5.1.0",
+    "cordova-plugin-androidx": "^2.0.0",
+    "cordova-plugin-androidx-adapter": "^1.1.1"
   }
 }

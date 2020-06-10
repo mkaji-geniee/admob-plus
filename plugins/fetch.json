@@ -1,0 +1,29 @@
+{
+  "cordova-admob-plus": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-admob-plus"
+    },
+    "is_top_level": true,
+    "variables": {
+      "APP_ID_ANDROID": "ca-app-pub-3940256099942544~3347511713",
+      "APP_ID_IOS": "ca-app-pub-3940256099942544~1458002511"
+    }
+  },
+  "cordova-plugin-androidx": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-androidx"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-androidx-adapter": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-androidx-adapter"
+    },
+    "is_top_level": true,
+    "variables": {}
+  }
+}
