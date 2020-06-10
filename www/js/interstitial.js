@@ -12,13 +12,6 @@ const app = {
   onDeviceReady() {
     this.receivedEvent('deviceready')
     this.showAds()
-    // this.checkIsLoaded().then(() => this.showAds())
-  },
-
-  checkIsLoaded() {
-    return admob.interstitial.isLoaded().then(result => {
-      return result
-    })
   },
 
   showAds() {
@@ -44,3 +37,4 @@ const app = {
 }
 
 app.initialize()
+
